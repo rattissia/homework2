@@ -16,15 +16,15 @@ services:
       - mysql
     volumes:
       - ./target/:/usr/local/tomcat/webapps # We map this so we don't have to keep rebuilding the container on every change
+    command: ["./wait-for-it.sh", "mysql:3308", "--", "catalina.sh", "run"]
   mysql:
     image: mysql:8.0.20
     volumes:
-      - cs4230-db:/var/lib/mysql
+      - cs4230-db-angela:/var/lib/mysql
     ports:
       - 3308:3306
     environment:
       <<: *db-variables
       MYSQL_ROOT_PASSWORD: 'password'
 volumes:
-  cs4230-db:
-© 2020 GitHub, Inc.
+  cs4230-db-angela:
