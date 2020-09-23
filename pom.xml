@@ -67,7 +67,7 @@
   </dependencies>
 
 <build>
-  <finalName>ROOT</finalName> <!-- This defines the compiled artifact name used in docker -->
+  <finalName>ROOT</finalName> <!-- This defines the compiled artifact name used in Dockerfile -->
   <sourceDirectory>src/main/java</sourceDirectory>
   <testSourceDirectory>src/test/java</testSourceDirectory>
   <plugins>

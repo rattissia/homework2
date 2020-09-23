@@ -6,4 +6,7 @@ EXPOSE 8080
 
 WORKDIR /usr/local/tomcat/bin
 
+COPY wait-for-it.sh wait-for-it.sh
+RUN ["chmod", "+x", "wait-for-it.sh"]
+
 CMD ["catalina.sh", "run"]
