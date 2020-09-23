@@ -1,0 +1,18 @@
+Commands in command prompt:
+mvn clean install
+docker build -t angelaholbrookhw1 . 
+docker run -p 8080:8080 angelaholbrookhw1
+
+browser:
+go to http://localhost:8080/
+
+Notes:
+I couldn't get the error to display on the index.jsp. I tried to play 
+around with the coding both on the index.jsp (<c:out value = "${ContactServlet.error}"/> and
+I tried <c:out value = "${error}"/> as well as ${error} etc etc. Additionally,
+I tried to add the error as a global value in ConstactServlet, tried putting print
+statements around to test where the scope was, etc. And once I got the scope 
+to where I thought it was ok, it still wasn't printing. So, I had to abandon it after
+spending a few hours trying to figure it out. I would appreciate learning though as
+I do want to know. I did ask on Thursday evening and we both thought it should work
+but it wasn't.
